@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table border="1">
+            <tr>
+                <td><label for="first_name">Ime:</label></td>
+                <td><input type="text" name="first_name" id="first_name"></td>
+            </tr>
+            <tr>
+                <td><label for="last_name">Prezime:</label></td>
+                <td><input type="text" name="last_name" id="last_name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Država:</label></td>
+                <td><select name="country" id="country">
+                    <option value="Hrvatska">Hrvatska</option>
+                    <option value="Srbija">Srbija</option>
+                    <option value="BiH">BiH</option>
+                    <option value="Makedonija">Makedonija</option>
+                    <option value="Crna Gora">Crna Gora</option>
+                    <option value="Slovenija">Slovenija</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Spol:</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male"> Muški
+                    <input type="radio" name="gender" id="female"> Ženski
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hobby">Zanima me:</label></td>
+                <td>
+                    <input type="checkbox" name="hobby" id="swimming"> Plivanje
+                    <input type="checkbox" name="hobby" id="climbing"> Penjanje
+                    <input type="checkbox" name="hobby" id="programming"> Programiranje
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Pošalji!</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
