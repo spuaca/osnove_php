@@ -4,7 +4,10 @@ $int = 2;
 $float = 6.4;
 $string = "tekst";
 $bool = true;
+$boolvar = boolval ('true');
 
+echo "boolvar = $boolvar";
+echo "<br>";
 echo "TIPOVI:";
 echo "<br>";
 echo "int = $int";
