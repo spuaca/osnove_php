@@ -18,4 +18,18 @@ echo "<br>";
 
 var_dump( !true && false);
 
+// vrijednosti koje vracaju FALSE
+$var = false;
+$var = 0;
+$var = 0.0;
+$var = '';
+$var = '0';
+$var = [];
+$var = NULL;
+
+echo "<br>";
+if (! '0') {
+    echo "Izraz je istinit.";
+}
+
 ?>
