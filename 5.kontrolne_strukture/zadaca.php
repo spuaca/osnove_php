@@ -1,4 +1,11 @@
 <?php
+/*
+* Višelinijski komentar
+*/
+function br(int $ponavljanje = 1)
+{
+    echo str_repeat("<br>", $ponavljanje);
+}
 
 echo "1. Koristeći petlju while, ispišite prvih deset brojeva.<br>";
 $i = 1;
@@ -7,6 +14,7 @@ while ($i <= 10) {
     echo "$i ";
     $i++;
 }
+br(6);
 echo "</pre>";
 
 echo "2. Koristeći petlju for, ispišite visekratnike broja 3 do 100.<br>";
@@ -17,8 +25,8 @@ for ($i = 3; $i <= 100; $i += 3) {
 echo "</pre>";
 
 echo "<pre>\t";
-for ($i = 3; $i <= 100; $i += 3) {
-    if ($i % 3 === 0) {
+for ($i = 3; $i <= 100; $i++) {
+    if ($i % 3 == 0) {
         echo "$i ";
     }
 }
@@ -30,7 +38,7 @@ for ($i = 1; $i <= 10; $i++) {
     for ($j = 1; $j <= 10; $j++) {
         echo "\t$i x $j = " . $i * $j . "<br>";
     }
-    echo "<br>";
+    br();
 }
 echo "</pre>";
 
@@ -45,7 +53,7 @@ echo "</pre>";
 echo "5. Ispisati imena iz niza \$names spojene sa zarezom i razmakom tako da iza zadnjeg imena ne budu zarez i razmak<br>";
 echo "<pre>\t";
 foreach ($names as $key => $name) {
-    if (count($names) - 1 === $key) {
+    if (count($names) - 1 == $key) {
         echo $name;
     } else {
         echo "$name, ";
@@ -58,7 +66,7 @@ $a = 5;
 $b = 10;
 $c = 15;
 echo "<pre>\t";
-if ($a < $b && $b < $c) {
+if (($a < $b && $b < $c) || ($a > $b && $b > $c)) {
     echo "$b je između $a i $c";
 } else {
     echo "$b nije između $a i $c";
