@@ -13,7 +13,6 @@ function returnText(): string
 $text = returnText();
 echo $text;
 
-echo "<br><br>";
 ?>
 
 <h2>PHP funkcije – vježba 2</h2>
