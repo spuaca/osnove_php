@@ -56,18 +56,15 @@ function returnSum(int $num): int
 }
 
 $returnSum = 'returnSum';
-$oldSum = 0;
 
 for ($i = 0; $i < 5; $i++) {
     $rand = rand(1, 10);
-
-    echo "oldSum = $oldSum<br>";
-    echo "rand = $rand<br>";
-
+    $oldSum = $returnSum(0);
+    // echo "oldSum = $oldSum<br>";
     $newSum = $returnSum($rand);
     echo "$oldSum + $rand = $newSum<br>";
-    echo "newSum = $newSum<br><br>";
     $oldSum = $newSum;
+    // echo "oldSum = newSum = $newSum<br><br>";
 }
 
 ?>
