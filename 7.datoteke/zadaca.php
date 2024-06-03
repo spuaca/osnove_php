@@ -2,6 +2,10 @@
 // 1. Pročitajte podatke iz datoteke polaznici.json, te ih ispišite u HTML tablicu.
 const FILE_PATH = __DIR__ . '/podaci/polaznici.json';
 
+function getDecode() {
+
+}
+
 $students = json_decode(file_get_contents(FILE_PATH), true);
 ?>
 <h1>Stara</h1>

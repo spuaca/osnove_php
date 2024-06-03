@@ -2,17 +2,28 @@
 
 const USERS_CSV = __DIR__ . '/podaci/users.csv';
 
-if (($handle = fopen(USERS_CSV, 'r')) !== false) {
+// YODA CODING NOTATION
+if (false !== $handle = fopen(USERS_CSV, 'r')) {
 
+    $headers = fgetcsv($handle);
     $data = [];
-    while(($row = fgetcsv($handle)) !== false){
-        $data[] = $row;
+
+    while (false !== $row = fgetcsv($handle)) {
+        // $data[] = $row;
+        $data[] = array_combine($headers, $row);
     }
 
-    // zatvrite stream prema datoteci
+    // zatvorite stream prema datoteci
     fclose($handle);
 
-    var_dump($data);
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+    
 } else {
     echo 'Unable to open the file.';
 }
+
+// if("redak") {
+//     echo "true";
+// }
