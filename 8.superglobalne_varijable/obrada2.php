@@ -3,7 +3,10 @@
 $podaci = $_POST;
 $poruka = "";
 
-if (!empty($podaci)) {
+echo "empty: " . empty($podaci) . "<br>";
+echo "isset: " . isset($podaci) . "<br>";
+
+if (isset($podaci)) {
     $ime = $podaci["first_name"];
     $prezime = $podaci["last_name"];
 
