@@ -1,13 +1,23 @@
 <?php
 
 // Set variables
+const DIR = __DIR__ . "/podaci";
 const FILE_PATH = __DIR__ . "/podaci/words.json";
 $words = [];
 
-// Read words.json
+// Make DIR podaci
+if (!is_dir(DIR)) {
+    mkdir(DIR);
+}
+
+// Check if words.json exists
 if (file_exists(FILE_PATH)) {
+    // Read words.json
     $wordsJson = file_get_contents(FILE_PATH);
     $words = json_decode($wordsJson, true);
+} else {
+    // Create words.json
+    file_put_contents(FILE_PATH, json_encode($words));
 }
 
 // Submit form
