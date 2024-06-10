@@ -13,6 +13,11 @@ if (!empty($podaci)) {
         die("Polje ime je obavezno.<br>");
     }
     if ($prezime === "") {
+        session_start();
+        $_SESSION["error"] = "Polje prezime je obavezno.<br>";
+
+        header("Location:forma2.php");
+
         echo "Polje prezime je obavezno.<br>";
     }
 

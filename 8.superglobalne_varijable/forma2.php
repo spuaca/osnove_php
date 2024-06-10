@@ -5,6 +5,14 @@
 
     <h2>HTML Forms</h2>
 
+    <?php
+    session_start();
+    if (isset($_SESSION["error"])) {
+        echo $_SESSION["error"];
+        unset($_SESSION["error"]);
+    }
+
+    ?>
     <form method="POST" action="obrada.php">
 
         <label for="first_name">Ime:</label><br>
